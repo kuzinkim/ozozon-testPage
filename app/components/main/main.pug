@@ -1,0 +1,26 @@
+.main(style="background-image: url(assets/images/main.jpg)")
+    .main__inner
+        .main__wrapper
+            h1.main__title Уборка квартир в Москве и Подмосковье
+            span.main__description Идеальный порядок каждую неделю
+            span.main__price от 1590 руб
+    .main__footer
+        form.main__form.form
+            .form__field
+                span.form__label Тип уборки
+                select(name="type").form__select
+                    option(value="1") Поддерживающая
+                    option(value="2") Генеральная
+            .form__field
+                span.form__label Количество комнат
+                select(name="type").form__select
+                    option(value="1") 1-комнатная
+                    option(value="2") 2-комнатная
+                    option(value="3") 3-комнатная
+                    option(value="4") 4-комнатная
+                    option(value="5") 5-комнатная
+            .form__field
+                button.form__button.button Оформить заявку
+        .main__bottom
+            span.main__bottom-text Закажите уборку на завтра прямо сейчас и получите СКИДКУ 15%. 
+            span.main__bottom-text Промокод: <span class="main__bottom-text--color">YESTERDAY</span> 

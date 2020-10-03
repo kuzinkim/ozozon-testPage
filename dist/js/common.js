@@ -1,0 +1,1 @@
+var debugTimes=!1;$(document).ready(function(){new Swiper(".swiper-container",{navigation:{nextEl:".slider-button--next",prevEl:".slider-button--prev"}})});

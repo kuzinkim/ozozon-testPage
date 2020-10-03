@@ -1,0 +1,45 @@
+.faq{
+    padding: 41px 0 70px 0;
+    background-color: #f8f8f8;
+
+    &__inner{
+        margin-top: 50px;
+    }
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content{
+        columns: 2;
+        list-style: decimal;
+        list-style-position: inside;
+        font-weight: 300;
+        box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-top: 42px;
+        padding: 28px 80px 31px 116px;
+
+        &-item{
+            margin-bottom: 8px;
+        }
+
+        &-link{
+            font-size: 16px;
+            line-height: 25px;
+            border-bottom: 1px dashed #000;
+        }
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: calc(33% - 20px);
+        justify-content: space-between;
+        padding: 16px 23px 16px 53px;
+        cursor: pointer;
+    }
+}

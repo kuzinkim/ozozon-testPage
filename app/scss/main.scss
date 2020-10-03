@@ -1,0 +1,31 @@
+@import '_vars';
+@import '_func';
+@import '_reset';
+@import '_fonts';
+
+/**
+ * Main Styles
+ */
+@import '_global';
+
+/**
+ * Elements
+ */
+@import '../elements/title/title'; 
+@import '../elements/button/button'; 
+
+
+/**
+ * Components
+ */
+
+@import '../components/header/header';
+@import '../components/main/main';
+@import '../components/service/service';
+@import '../components/cleaning-types/cleaning-types';
+@import '../components/advantages/advantages';
+@import '../components/faq/faq';
+@import '../components/reviews/reviews';
+
+
+

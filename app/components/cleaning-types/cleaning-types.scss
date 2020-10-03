@@ -1,0 +1,205 @@
+.cleaning-types{
+    padding: 65px 0 67px 0;
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 37px;
+    }
+    .container{
+        padding: 0 10px;
+    }
+}
+
+.item{
+    box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+    width: calc(50% - 35px);
+    border-radius: 10px;
+    padding: 37px 0 35px;
+
+    &__wrap{
+        
+        &-list{
+            min-height: 426px;
+            border-bottom: 2px solid #f6f6f5;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+
+        span{
+            display: inline-block;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: #82eaae;
+                border-radius: 50%;
+                top: 50%;
+                left: -20px;
+                transform: translateY(-50%);
+            }
+        }
+        &--color-point{
+            span{
+                &::after{
+                    background-color: #f6ff00;
+                }
+            }
+        }
+    }
+
+    &__list{
+        padding-left: 50px;
+        margin: 27px 0 36px;
+        &-text{
+            font-size: 16px;
+            font-weight: 300;
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 6px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url('../assets/images/done.png');
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 11px;
+                height: 9px;
+                opacity: 0.5;
+            }
+        }
+
+        &-bonus{
+            font-weight: 300;
+            padding-left: 50px;
+
+            &-title{
+                font-weight: 500;
+                color: #212121;
+                padding-left: 32px;
+                margin-bottom: 6px;
+                display: block;
+            }
+
+            &-text{
+                padding-left: 32px;
+                position: relative;
+                margin-bottom: 3px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                &::before{
+                    content: '+';
+                    position: absolute;
+                    left: -8px;
+                    color: #6fe0f2;
+                }
+            }
+        }
+    }
+    &__button{
+        margin: 0 auto;
+    }
+}
+
+.price{
+    display: flex;
+    padding: 42px 0 17px;
+
+    &__wrap{
+        margin-right: 18px;
+        padding-left: 82px;
+    }
+
+    &__title{
+        font-size: 16px;
+        font-weight: 400;
+        display: block;
+    }
+
+    &__text{
+        font-size: 14px;
+        color: #999999;
+        font-weight: 300;
+        display: block;
+    }
+
+    &__result{
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 33px;
+    }
+}
+
+.counter{
+    padding: 57px 61px;
+    box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    &__item{
+        margin-right: 114px;
+        &:last-child{
+            margin-right: 0;
+            padding-top: 4px;
+        }
+        &-wrap{
+            display: inline-block;
+            text-align: center;
+            &:nth-child(1){
+                margin-right: 94px;
+            }
+            &:nth-child(2){
+                margin-right: 64px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__title{
+        font-size: 24px;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    &__date{
+        font-size: 18px;
+        display: block;
+        font-weight: 300;
+        color: #999999;
+    }
+
+    &__num{
+        display: block;
+        font-size: 48px;
+        color: #6fe0f1;
+    }
+
+    &__text{
+        display: block;
+        font-weight: 300;
+        font-size: 17px;
+    }
+}

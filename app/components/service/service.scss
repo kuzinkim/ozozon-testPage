@@ -1,0 +1,88 @@
+.service{
+    padding: 48px 0 0;
+
+    &__description{
+        display: block;
+        font-weight: 300;
+        font-size: 18px;
+        text-align: center;
+        margin: 26px 0 16px;
+    }
+    &__pic{
+        width: 978px;
+        height: 550px;
+        margin: 0 auto 20px;
+        max-width: 100%;
+
+        &-item{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+    &__point{
+        display: flex;
+
+        &-item{
+            width: 50%;
+            position: relative;
+            text-align: center;
+
+            span{
+                display: inline-block;
+                position: relative;
+                padding-left: 20px;
+                top: -5px;
+                left: 45px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #82eaae;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            &--color{
+                span{
+                    left: -5px;
+                    &::after{
+                        background-color: #f6ff00;
+                    }
+                } 
+            }
+        }
+    }
+}
+
+.tab{
+    text-align: center;
+    margin-bottom: 36px;
+
+    &__text{
+        font-size: 18px;
+        display: inline-block;
+        margin-right: 33px;
+        font-weight: 300;
+    }
+
+    &__item{
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 300;
+        border-bottom: 1px dashed #000;
+        margin-right: 33px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &.active{
+            border-bottom: none;
+            color: #62d5e9;
+        }
+    }
+}

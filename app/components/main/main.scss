@@ -1,0 +1,120 @@
+.main{
+    height: 811px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding-bottom: 39px;
+
+    @media (max-width: 1366px){
+        background-size: 128%;
+        background-position: -154px 0%;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.35);
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__wrapper{
+        text-align: center;
+        font-family: 'Intro', sans-serif;
+        color: #fff;
+    }
+
+    &__title{
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 48px;
+        letter-spacing: 0.5px;
+    }
+
+    &__description{
+        display: block;
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    &__price{
+        display: block;
+        color: #82eaad;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: normal;
+    }
+    &__footer{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        max-width: 100%;
+    }
+
+    &__bottom{
+        margin: 20px 0;
+        text-align: center;
+        color: #fff;
+
+        &-text{
+            display: block;
+            letter-spacing: 1.15px;
+
+            &--color{
+                color: #f6ff00;
+            }
+        }
+    }
+}
+
+.form{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px 30px 20px 28px;
+
+    &__field{
+        margin-right: 30px;
+
+    }
+
+    &__label{
+        display: block;
+        font-size: 16px;
+        line-height: 35px;
+        color: #666666;
+        font-weight: 100;
+        
+    }
+
+    &__select{
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 42px;
+        color: #212121;
+        padding: 8px 8px 8px 16px;
+        border-radius: 5px;
+        width: 237px;
+        cursor: pointer;
+        -webkit-appearance: listitem;
+        border-color: #d9d9d9;
+    }
+}

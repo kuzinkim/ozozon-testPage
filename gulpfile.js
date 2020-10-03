@@ -115,7 +115,8 @@ gulp.task('css-build', function() {
               message: err.message
           }))
 	  }))
-      .pipe(sass())
+	  .pipe(sass())
+	  .pipe(cssnano())
 	  .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
       .pipe(gulp.dest('dist/css'))
       .pipe(browserSync.stream())

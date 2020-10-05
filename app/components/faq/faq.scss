@@ -12,23 +12,62 @@
     }
 
     &__content{
-        columns: 2;
-        list-style: decimal;
-        list-style-position: inside;
-        font-weight: 300;
-        box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-top: 42px;
-        padding: 28px 80px 31px 116px;
+        &-list{
+            display: flex;
+            list-style: decimal;
+            list-style-position: inside;
+            font-weight: 300;
+            box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 42px;
+            padding: 28px 80px 23px 116px;
+
+            @include media-breakpoint-down(tablet) {
+                padding: 28px 30px 23px 30px;
+            }
+
+            @include media-breakpoint-down(mobile) {
+                padding: 20px;
+                display: block;
+            }
+        }
+
+        &-col{
+            width: 50%;
+
+            @include media-breakpoint-down(mobile) {
+                width: 100%;
+                padding-left: 0 !important;
+            }
+
+            &:nth-child(2){
+                padding-left: 9px;
+            }
+        }
 
         &-item{
             margin-bottom: 8px;
+
+            @include media-breakpoint-down(mobile) {
+                font-size: 14px;
+            }
         }
 
         &-link{
             font-size: 16px;
             line-height: 25px;
             border-bottom: 1px dashed #000;
+
+            @include media-breakpoint-down(mobile) {
+                font-size: 14px;
+                line-height: normal;
+            }
+        }
+
+        &-text{
+            margin-top: 10px;
+            display: none;
+            font-weight: 400;
         }
     }
 
@@ -41,5 +80,42 @@
         justify-content: space-between;
         padding: 16px 23px 16px 53px;
         cursor: pointer;
+        position: relative;
+
+        @include media-breakpoint-down(tablet) {
+            padding: 16px 10px 16px 30px;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            padding: 16px 10px 16px 10px;
+            width: calc(33% - 10px);
+        }
+
+        &.is-active{
+            color: #4bd0e4;
+        }
+
+        &-text{
+            flex-shrink: 0;
+
+            @include media-breakpoint-down(mobile) {
+                font-size: 12px;
+                position: absolute;
+                left: 50%;
+                top: 106%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+                font-weight: 500;
+            }
+        }
+
+        &-pic{
+            @include media-breakpoint-down(tablet) {
+                width: 50px;
+            }
+            @include media-breakpoint-down(mobile) {
+                margin: 0 auto;
+            }
+        }
     }
 }

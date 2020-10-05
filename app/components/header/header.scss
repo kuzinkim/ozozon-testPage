@@ -5,16 +5,52 @@
     right: 0;
     z-index: 100;
 
+    @include media-breakpoint-down(tablet) {
+        padding: 0 30px;
+    }
+
+    @include media-breakpoint-down(mobile) {
+        padding: 0 20px;
+    }
+
 
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 20px;
+
+        @include media-breakpoint-down(mobile) {
+            padding-top: 10px;
+        }
+
     }
 
     &__wrapper{
         padding-top: 17px;
+
+        @include media-breakpoint-down(tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 218px;
+            background: linear-gradient(360deg, #82eaad 27%, #6fe0f0 70%);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            padding-top: 90px;
+            padding-left: 30px;
+        }
+        @include media-breakpoint-down(mobile) {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+        }
+        &.active{
+            transform: translateX(0);
+        }
     }
 
     &__logo{
@@ -25,6 +61,16 @@
         font-size: 40px;
         margin-right: 63px;
 
+        @include media-breakpoint-down(tablet) {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            font-size: 30px;
+            margin-left: 10px;
+        }
+
         &--color{
             color: #82eaad;
         }
@@ -34,8 +80,16 @@
         display: flex;
         align-items: center;
 
+        &:nth-child(1){
+            flex-shrink: 0;
+        }
+
         &:nth-child(2){
             padding-top: 17px;
+
+            @include media-breakpoint-down(mobile) {
+                padding-top: 10px;
+            }
         }
     }
 
@@ -48,6 +102,21 @@
         border-radius: 30px;
         font-size: 14px;
         color: #fff;
+        img{
+            display: none;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            padding: 0;
+            width: 23px;
+            border: none;
+            span{
+                display: none;
+            }
+            img{
+                display: block;
+            }
+        }
     }
 
     &__phone{
@@ -55,6 +124,20 @@
         color: #f6ff00;
         font-size: 15px;
         margin-right: 38px;
+        img{
+            display: none;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            margin-right: 20px;
+            width: 20px;
+            span{
+                display: none;
+            }
+            img{
+                display: block;
+            }
+        }
     }
 
     &__feedback-button{
@@ -62,6 +145,14 @@
         float: right;
         margin-top: 41px;
         margin-right: 16px;
+
+        @include media-breakpoint-down(tablet) {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            margin-right: 0;
+            margin-top: 0;
+        }
     }
 }
 
@@ -76,12 +167,27 @@
         &:last-child{
             margin-right: 0;
         }
+
+        @include media-breakpoint-down(tablet) {
+            margin-right: 0;
+            display: block;
+            line-height: normal;
+            margin-bottom: 20px;
+            font-weight: 500;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-down(mobile) {
+            font-size: 20px;
+        }
     }
 }
 
 .burg {
     display: none;
-    width: 18px;
+    width: 26px;
     cursor: pointer;
     position: relative;
     z-index: 4;
@@ -92,12 +198,16 @@
         content: '';
         display: block;
         width: 100%;
-        height: 2px;
+        height: 3px;
         margin-top: 5px;
-        background-color: #000;
+        background-color: #fff;
         transition: transform .3s,opacity .2s;
         &:first-child{
             margin-top: 0;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            height: 2px;
         }
     }
 
@@ -108,11 +218,11 @@
         }
         .burg__line:nth-child(2) {
             transform: rotate(45deg);
-            background-color: #000;
+            background-color: #fff;
         }
         .burg__line:nth-child(2)::after {
             transform: rotate(-90deg);
-            background-color: #000;
+            background-color: #fff;
         }
         .burg__line:nth-child(3) {
             opacity: 0;
@@ -120,8 +230,7 @@
         }
     }
 
-    @include media-breakpoint-down(mobile) {
+    @include media-breakpoint-down(tablet) {
         display: block;
-        margin-top: -5px;
     }
 }

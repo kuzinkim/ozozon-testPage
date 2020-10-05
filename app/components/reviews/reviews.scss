@@ -1,6 +1,10 @@
 .reviews{
     padding: 69px 0 0 0;
 
+    @include media-breakpoint-down(mobile) {
+        padding: 48px 0 0 0;  
+    }
+
     &__section{
         margin-top: 44px;
         background-repeat: no-repeat;
@@ -8,12 +12,25 @@
         background-size: cover;
         padding: 85px 0 80px;
         text-align: center;
+
+        @include media-breakpoint-down(mobile) {
+            margin-top: 24px;
+            padding: 35px 0 110px;
+        }
     }
 
     &__inner{
         padding: 0 87px;
         position: relative;
         text-align: left;
+
+        @include media-breakpoint-down(tablet) {
+            padding: 0 40px;
+        }
+
+        @include media-breakpoint-down(mobile) {
+            padding: 0;
+        }
     }
 
     &__slider{
@@ -56,7 +73,10 @@
     background-color: #f0f0f0;
     border-radius: 50%;
     cursor: pointer;
-
+    @include media-breakpoint-down(mobile) {
+        width: 30px;
+        height: 30px;
+    }
     &--prev,
     &--next{
         &::after{
@@ -73,6 +93,12 @@
 
     &--prev{
         left: 63px;
+        @include media-breakpoint-down(tablet) {
+            left: 13px;
+        }
+        @include media-breakpoint-down(mobile) {
+            left: -13px;
+        }
         &::after{
             content: '';
             transform: translate(-50%, -50%) rotate(180deg);
@@ -81,7 +107,11 @@
 
     &--next{
         right: 63px;
-
-        
+        @include media-breakpoint-down(tablet) {
+            right: 13px;
+        }
+        @include media-breakpoint-down(mobile) {
+            right: -13px;
+        }
     }
 }

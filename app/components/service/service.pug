@@ -1,16 +1,38 @@
-.service
+.service#service
     .container
         h2.service__title.title Про уборки
         span.service__description Клинер приедет со всем необходимым для уборки. Стоимость уборки рассчитывается от количества комнат.
         .service__inner
             .service__tab.tab
-                span.tab__text В каждый тариф входит уборка:
-                span.tab__item.active(data-text="1") В комнате
-                span.tab__item(data-text="2") На кухне
-                span.tab__item(data-text="3") В ванной и туалете
-                span.tab__item(data-text="4") В коридоре
-            .service__pic
-                .service__pic-item(data-text="1" style="background-image: url(assets/images/1.png)")
+                .tab-wrap
+                    span.tab__text В каждый тариф входит уборка:
+                .tab-wrap
+                    div
+                        .tab-wrap-row
+                            span.tab__item(data-text="1").js-service-tab В комнате
+                            span.tab__item(data-text="2").js-service-tab На кухне
+                            span.tab__item(data-text="3").js-service-tab В ванной и туалете
+                            span.tab__item(data-text="4").js-service-tab В коридоре
+            .service__pic(data-text="1").js-service-content
+                .service__pic-wrapper
+                    .service__pic-item(data-text="1" style="background-image: url(assets/images/room.png)")
+                .service__pic-hang
+                    img(src="assets/images/scroll.png", alt="")
+            .service__pic(data-text="2").js-service-content
+                .service__pic-wrapper
+                    .service__pic-item(data-text="1" style="background-image: url(assets/images/kitchen.png)")
+                .service__pic-hang
+                    img(src="assets/images/scroll.png", alt="")
+            .service__pic(data-text="3").js-service-content
+                .service__pic-wrapper
+                    .service__pic-item(data-text="1" style="background-image: url(assets/images/12.png)")
+                .service__pic-hang
+                    img(src="assets/images/scroll.png", alt="")
+            .service__pic(data-text="4").js-service-content
+                .service__pic-wrapper
+                    .service__pic-item(data-text="1" style="background-image: url(assets/images/1.png)")
+                .service__pic-hang
+                    img(src="assets/images/scroll.png", alt="")
             .service__point
                 .service__point-item 
                     span Поддерживающая уборка

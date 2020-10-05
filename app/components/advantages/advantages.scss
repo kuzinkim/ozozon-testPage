@@ -4,14 +4,31 @@
     background-size: cover;
     padding: 86px 0 99px 0;
 
+    @include media-breakpoint-down(mobile) {
+        padding: 86px 0 48px 0;
+    }
+
     &__inner{
         display: flex;
         margin-top: 75px;
         position: relative;
+
+        @include media-breakpoint-down(mobile) {
+            display: block;
+            margin-top: 25px;
+        }
     }
 
     &__item{
         width: calc(25% - 41px);
+        @include media-breakpoint-down(mobile) {
+            width: 100%;
+            margin-right: 0 !important;
+            margin-bottom: 38px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
         &:nth-child(1){
             margin-right: 35px;
         }
@@ -27,12 +44,25 @@
             margin-top: 28px;
             display: block;
             text-align: center;
+
+            @include media-breakpoint-down(mobile) {
+                font-size: 14px;
+                width: 260px;
+                margin: 20px auto;
+            }
         }
 
         &-pic{
             min-height: 127px;
             display: flex;
             align-items: center;
+
+            @include media-breakpoint-down(mobile) {
+                display: block;
+                min-height: auto;
+                width: 70px;
+                margin: 0 auto;
+            }
 
             img{
                 margin: 0 auto;

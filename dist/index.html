@@ -23,19 +23,19 @@
       <div class="header">
         <div class="container container--header">
           <div class="header__inner">
-            <div class="header__col"><a class="header__logo" href="#"><span class="header__logo--color">о</span>zozon      </a>
-              <div class="header__wrapper nav"><a class="nav__item" href="#">Про уборки</a><a class="nav__item" href="#">Оформить заказ</a><a class="nav__item" href="#">О нас</a><a class="nav__item" href="#">Отзывы</a><a class="nav__item" href="#">F.A.Q.</a><a class="nav__item" href="#">Акции</a></div>
+            <div class="header__col">
+              <div class="header__burger burg js-burg">
+                <div class="burg__line"></div>
+                <div class="burg__line"></div>
+                <div class="burg__line"></div>
+              </div><a class="header__logo" href="#"><span class="header__logo--color">о</span>zozon      </a>
+              <div class="header__wrapper nav js-menu"><a class="nav__item" href="#service">Про уборки</a><a class="nav__item" href="#cleaning-types">Оформить заказ</a><a class="nav__item" href="#advantages">О нас</a><a class="nav__item" href="#reviews">Отзывы</a><a class="nav__item" href="#faq">F.A.Q.</a><a class="nav__item" href="#">Акции</a></div>
             </div>
-            <div class="header__col"><a class="header__phone" href="tel:+74958453444">+7  (495) 845-34-44</a><a class="header__button" href="">Войти</a></div>
-            <div class="header__burger burg js-burg">
-              <div class="burg__line"></div>
-              <div class="burg__line"></div>
-              <div class="burg__line"></div>
-            </div>
-          </div><a class="header__feedback-button" href="#"><img src="assets/images/phone.png" alt=""/></a>
+            <div class="header__col"><a class="header__phone" href="tel:+74958453444"><span>+7 (495) 845-34-44</span><img src="assets/images/phone-mobile.png" alt=""/></a><a class="header__button" href=""><span>Войти</span><img src="assets/images/sign.png" alt=""/></a></div>
+          </div><a class="header__feedback-button" href="tel:+74958453444"><img src="assets/images/phone.png" alt=""/></a>
         </div>
       </div>
-      <div class="main" style="background-image: url(assets/images/main.jpg)">
+      <div class="main" id="main" style="background-image: url(assets/images/main.jpg)">
         <div class="main__inner">
           <div class="main__wrapper">
             <h1 class="main__title">Уборка квартир в Москве и Подмосковье</h1><span class="main__description">Идеальный порядок каждую неделю</span><span class="main__price">от 1590 руб</span>
@@ -62,16 +62,44 @@
               <button class="form__button button">Оформить заявку</button>
             </div>
           </form>
-          <div class="main__bottom"><span class="main__bottom-text">Закажите уборку на завтра прямо сейчас и получите СКИДКУ 15%. </span><span class="main__bottom-text">Промокод: <span class="main__bottom-text--color">YESTERDAY</span> </span></div>
+          <div class="main__bottom"><span class="main__bottom-text">Закажите уборку на завтра прямо сейчас и получите СКИДКУ&nbsp;15%. </span><span class="main__bottom-text">Промокод: <span class="main__bottom-text--color">YESTERDAY</span> </span></div>
         </div>
       </div>
-      <div class="service">
+      <div class="service" id="service">
         <div class="container">
           <h2 class="service__title title">Про уборки</h2><span class="service__description">Клинер приедет со всем необходимым для уборки. Стоимость уборки рассчитывается от количества комнат.</span>
           <div class="service__inner">
-            <div class="service__tab tab"><span class="tab__text">В каждый тариф входит уборка:</span><span class="tab__item active" data-text="1">В комнате</span><span class="tab__item" data-text="2">На кухне</span><span class="tab__item" data-text="3">В ванной и туалете</span><span class="tab__item" data-text="4">В коридоре</span></div>
-            <div class="service__pic">
-              <div class="service__pic-item" data-text="1" style="background-image: url(assets/images/1.png)"></div>
+            <div class="service__tab tab">
+              <div class="tab-wrap"><span class="tab__text">В каждый тариф входит уборка:</span></div>
+              <div class="tab-wrap">
+                <div>
+                  <div class="tab-wrap-row"><span class="tab__item js-service-tab" data-text="1">В комнате</span><span class="tab__item js-service-tab" data-text="2">На кухне</span><span class="tab__item js-service-tab" data-text="3">В ванной и туалете</span><span class="tab__item js-service-tab" data-text="4">В коридоре</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="service__pic js-service-content" data-text="1">
+              <div class="service__pic-wrapper">
+                <div class="service__pic-item" data-text="1" style="background-image: url(assets/images/room.png)"></div>
+              </div>
+              <div class="service__pic-hang"><img src="assets/images/scroll.png" alt=""/></div>
+            </div>
+            <div class="service__pic js-service-content" data-text="2">
+              <div class="service__pic-wrapper">
+                <div class="service__pic-item" data-text="1" style="background-image: url(assets/images/kitchen.png)"></div>
+              </div>
+              <div class="service__pic-hang"><img src="assets/images/scroll.png" alt=""/></div>
+            </div>
+            <div class="service__pic js-service-content" data-text="3">
+              <div class="service__pic-wrapper">
+                <div class="service__pic-item" data-text="1" style="background-image: url(assets/images/12.png)"></div>
+              </div>
+              <div class="service__pic-hang"><img src="assets/images/scroll.png" alt=""/></div>
+            </div>
+            <div class="service__pic js-service-content" data-text="4">
+              <div class="service__pic-wrapper">
+                <div class="service__pic-item" data-text="1" style="background-image: url(assets/images/1.png)"></div>
+              </div>
+              <div class="service__pic-hang"><img src="assets/images/scroll.png" alt=""/></div>
             </div>
             <div class="service__point">
               <div class="service__point-item"> <span>Поддерживающая уборка</span></div>
@@ -80,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="cleaning-types">
+      <div class="cleaning-types" id="cleaning-types">
         <div class="container">
           <h2 class="cleaning-types__title title">Типы уборки</h2>
           <div class="cleaning-types__inner">
@@ -136,9 +164,9 @@
           </div>
         </div>
       </div>
-      <div class="advantages" style="background-image: url(assets/images/paper.png)">
+      <div class="advantages" id="advantages" style="background-image: url(assets/images/paper.png)">
         <div class="container">
-          <h2 class="advantages__title title">Вы обязательно останетесь довольны, ведь мы...</h2>
+          <h2 class="advantages__title title">Вы обязательно останетесь довольны, ведь&nbsp;мы...</h2>
           <div class="advantages__inner">
             <div class="advantages__item">
               <div class="advantages__item-pic"><img src="assets/images/flower.png" alt=""/></div><span class="advantages__item-text">Используем только уникальные экологичные средства</span>
@@ -155,38 +183,136 @@
           </div>
         </div>
       </div>
-      <div class="faq">
+      <div class="faq" id="faq">
         <div class="container">
           <h2 class="faq__title title">Часто задаваемые вопросы</h2>
           <div class="faq__inner">
             <div class="faq__wrap">
-              <div class="faq__item" data-text="11"><span class="faq__item-text">По оплате</span>
+              <div class="faq__item js-faq-tab" data-text="11"><span class="faq__item-text">По оплате</span>
                 <div class="faq__item-pic"><img src="assets/images/2.png" alt=""/></div>
               </div>
-              <div class="faq__item" data-text="12"><span class="faq__item-text">По уборке</span>
+              <div class="faq__item js-faq-tab" data-text="12"><span class="faq__item-text">По уборке</span>
                 <div class="faq__item-pic"><img src="assets/images/3.png" alt=""/></div>
               </div>
-              <div class="faq__item" data-text="13"><span class="faq__item-text">По персоналу</span>
+              <div class="faq__item js-faq-tab" data-text="13"><span class="faq__item-text">По персоналу</span>
                 <div class="faq__item-pic"><img src="assets/images/4.png" alt=""/></div>
               </div>
             </div>
-            <ol class="faq__content">
-              <li class="faq__content-item">  <a class="faq__content-link" href="">Что входит в Ваши уборки?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Обязательно ли мое присутствие?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Чем вы убираетесь?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Что нужно предоставить клинеру для уборки?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Клинеру нужны чистые тряпочки?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Могу ли я дать клинеру чаевые? Должен ли я предупреждать вас об этом?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">У меня большая квартира. Как её считать?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Делаете ли вы уборку в выходные?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Выезжаете ли вы в область за МКАД?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Что такое подписка и в чем ее преимущество?</a></li>
-              <li class="faq__content-item"><a class="faq__content-link" href="">Чем вы не занимаетесь?</a></li>
-            </ol>
+            <div class="faq__content js-faq-content" data-text="11">
+              <ol class="faq__content-list">
+                <div class="faq__content-col">
+                  <li class="faq__content-item">  <a class="faq__content-link js-content-tab" href="">Что входит в Ваши уборки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Обязательно ли мое присутствие?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Чем вы убираетесь?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Что нужно предоставить клинеру для уборки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Клинеру нужны чистые тряпочки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Могу ли я дать клинеру чаевые? Должен ли я предупреждать вас об этом?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                </div>
+                <div class="faq__content-col">
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">У меня большая квартира. Как её считать?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Делаете ли вы уборку в выходные?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Выезжаете ли вы в область за МКАД?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Что такое подписка и в чем ее преимущество?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Чем вы не занимаетесь?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                </div>
+              </ol>
+            </div>
+            <div class="faq__content js-faq-content" data-text="12">
+              <ol class="faq__content-list">
+                <div class="faq__content-col">
+                  <li class="faq__content-item">  <a class="faq__content-link js-content-tab" href="">Что входит в Ваши уборки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Обязательно ли мое присутствие?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Чем вы убираетесь?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Что нужно предоставить клинеру для уборки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Клинеру нужны чистые тряпочки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Могу ли я дать клинеру чаевые? Должен ли я предупреждать вас об этом?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                </div>
+                <div class="faq__content-col">
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">У меня большая квартира. Как её считать?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Делаете ли вы уборку в выходные?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Выезжаете ли вы в область за МКАД?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Что такое подписка и в чем ее преимущество?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                </div>
+              </ol>
+            </div>
+            <div class="faq__content js-faq-content" data-text="13">
+              <ol class="faq__content-list">
+                <div class="faq__content-col">
+                  <li class="faq__content-item">  <a class="faq__content-link js-content-tab" href="">Что входит в Ваши уборки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Обязательно ли мое присутствие?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Чем вы убираетесь?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Что нужно предоставить клинеру для уборки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Клинеру нужны чистые тряпочки?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Могу ли я дать клинеру чаевые? Должен ли я предупреждать вас об этом?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                </div>
+                <div class="faq__content-col">
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">У меня большая квартира. Как её считать?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                  <li class="faq__content-item"><a class="faq__content-link js-content-tab" href="">Делаете ли вы уборку в выходные?</a>
+                    <div class="faq__content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                  </li>
+                </div>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
-      <div class="reviews">
+      <div class="reviews" id="reviews">
         <h2 class="reviews__title title">Отзывы</h2>
         <div class="reviews__section" style="background-image: url(assets/images/reviews.png)">
           <div class="container">

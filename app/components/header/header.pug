@@ -2,22 +2,24 @@
     .container.container--header
         .header__inner
             .header__col
+                .header__burger.burg.js-burg
+                    .burg__line
+                    .burg__line
+                    .burg__line
                 a(href="#").header__logo <span class="header__logo--color">о</span>zozon      
-                .header__wrapper.nav
-                    a.nav__item(href="#") Про уборки
-                    a.nav__item(href="#") Оформить заказ
-                    a.nav__item(href="#") О нас
-                    a.nav__item(href="#") Отзывы
-                    a.nav__item(href="#") F.A.Q.
+                .header__wrapper.nav.js-menu
+                    a.nav__item(href="#service") Про уборки
+                    a.nav__item(href="#cleaning-types") Оформить заказ
+                    a.nav__item(href="#advantages") О нас
+                    a.nav__item(href="#reviews") Отзывы
+                    a.nav__item(href="#faq") F.A.Q.
                     a.nav__item(href="#") Акции
             .header__col
-                a(href="tel:+74958453444").header__phone +7  (495) 845-34-44
-                a(href="").header__button Войти
-            .header__burger.burg.js-burg
-                .burg__line
-                .burg__line
-                .burg__line
-        a(href="#").header__feedback-button
+                a(href="tel:+74958453444").header__phone <span>+7 (495) 845-34-44</span>
+                    img(src="assets/images/phone-mobile.png", alt="")
+                a(href="").header__button <span>Войти</span>
+                    img(src="assets/images/sign.png", alt="")
+        a(href="tel:+74958453444").header__feedback-button
             img(src="assets/images/phone.png", alt="")
                     
             
